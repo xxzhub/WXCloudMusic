@@ -1,0 +1,45 @@
+/* pages/my/index.wxss */
+
+
+page {
+  height: 100%;
+}
+.login {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  margin-top: 20px;
+}
+.login-location {
+  height: 200px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-80%);
+}
+.phone {
+  display: flex;
+  height: 40px;
+}
+.phone-text{
+  flex: 4;
+  font-size: 16px;
+  text-align: right;
+}
+.phone-input {
+  border-bottom: 1px solid #666;
+  flex: 20;
+}
+.password {
+  display: flex;
+  height: 40px;
+}
+.password-text{
+  flex: 4;
+  font-size: 16px;
+  text-align: right;
+}
+.password-input {
+  border-bottom: 1px solid #666;
+  flex: 20;
+}

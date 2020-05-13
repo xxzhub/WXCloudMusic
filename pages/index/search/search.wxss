@@ -1,0 +1,111 @@
+
+/*!
+ * WeUI v2.3.0 (https://github.com/weui/weui-wxss)
+ * Copyright 2020 Tencent, Inc.
+ * Licensed under the MIT license
+ */
+
+page{
+  width: 100%;
+  height: 100%;
+  background-color: #FBFCFE;
+}
+
+.page-header {
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  top: 0;
+}
+.weui-search-bar {
+  background-color:#DC4238;
+  border: 1px  solid #DC4238;
+  height: 100%;
+}
+.weui-search-bar__box{
+  background-color: #DE655C;
+  border: 0px solid #DE655C;
+  border-radius: 20rpx;
+  position: relative;
+  height: 100%;
+}
+.weui-search-bar__from{
+  height: 65rpx;
+}
+.weui-search-bar__text {
+  color: #fff;
+}
+.weui-icon-search {
+  position: absolute;
+  left: 2%;
+  top: 8rpx;
+}
+.weui-search-bar__text {
+  position: absolute;
+  width: 80%;
+  left: 8%;
+   top: 8rpx;
+}
+
+
+
+.hot-keys {
+  padding: 30rpx 30rpx 20rpx 30rpx;
+  margin-top:100rpx;
+}
+.hot-single {
+  height: 100rpx;
+}
+.title {
+  width: 100%;
+}
+.serial-number {
+  width: 100rpx;
+  position: relative;
+}
+.serial-number >text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 18px;
+  color: rgb(209, 25, 25);
+}
+
+.main-title {
+  font-weight: 700;
+}
+
+.main-conents {
+  font-size: 24rpx;
+  color: #333;
+}
+
+.hot-number {
+  position: relative;
+  padding-right:10rpx; 
+  width: 100rpx;
+}
+
+.hot-number >text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 24rpx;
+  color: #5e5c5c;
+}
+
+.weui-search-bar__cancel-btn {
+  color:#ffffff;
+  font-size:28rpx;
+}
+
+.header-hide {
+  display: none;
+}
+
+.search-suggest {
+  margin-top: 100rpx;
+  width: 100%;
+}

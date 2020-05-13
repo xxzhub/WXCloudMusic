@@ -1,0 +1,44 @@
+<view class="searchPage">
+<view class="page-header">
+  <view class="weui-search-bar">
+    <view class="weui-search-bar__form">
+      <view class="weui-search-bar__box">
+        <icon class="weui-icon-search" type="search" size="14" color='#EDA8A3'></icon>
+        <input focus='true' type="text" class="weui-search-bar__text" placeholder="请输入歌手或者歌曲名" placeholder-style="color:#EDA8A3" bindinput="getsearchKey" ></input>
+
+         <view class="weui-icon-clear">
+                    <icon type="clear" size="14" color='#EDA8A3'></icon>
+          </view>
+      </view>
+    </view>
+     <view class="weui-search-bar__cancel-btn" bindtap="cancel">取消</view>
+  </view>
+</view>
+
+<!--热门榜-->
+<view class="{{isShowHotList ? 'hot-keys' : 'header-hide'}}">
+  <view class="title">热搜榜</view>
+  <view class="hot-list">
+    <view wx:for="{{hotListData}}" wx:key="index" class="weui-flex hot-single">
+      <view class="serial-number">
+      <text>{{index+1}}</text>
+      </view>
+      <view class="main weui-flex__item">
+        <view class="main-title">{{item.searchWord}}</view>
+        <view class="main-conents">{{item.content}}</view>
+      </view>
+      <view class="hot-number">
+              <text>{{item.score}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<!--搜索建议-->
+<view class="{{isSearchSuggest ? 'search-suggest' : 'header-hide' }}">
+  <view wx:for="{{searchSuggestList}}" wx:key="index" class="search-result">
+    <icon class="weui-icon-search" type="search" size="14" color='#EDA8A3'></icon>
+     <text  class="search.result-text" >{{item.keyword}}</text>
+  </view>
+</view>
+</view>
+

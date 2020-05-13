@@ -1,0 +1,13 @@
+<view class="page">
+<!--输入框-->
+	<view class="page-header">
+  <view class="weui-search-bar">
+     <view  class="weui-search-bar__form">
+				<label class="weui-search-bar__label" bindtap="go_search">
+					<icon class="weui-icon-search" type="search" size="12" color='#EDA8A3'></icon>
+          <span class="weui-search-bar__text">请输入歌手或者歌曲名</span>
+				</label>
+		</view>
+  </view>
+	</view>
+</view>
