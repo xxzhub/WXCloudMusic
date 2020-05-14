@@ -6,12 +6,13 @@ Page({
    */
   data: {
     inputShowed: false,
-    inputVal: "",
     hotListData:[],//热搜列表
     inputValue:"",//输入框的值
+    searchKey:"",//搜索的值
     isShowHotList:true, //热搜列表显示
     isSearchSuggest:false,//搜索建议显示
     searchSuggestList:[],//搜索建议数据
+
   },
   /**
    * 生命周期函数--监听页面加载
@@ -83,9 +84,13 @@ Page({
   //实时获取输入框值
   getsearchKey(e){
     let searchVal = e.detail.value
+    //实时获取输入值
+    this.setData({
+      searchKey: searchVal
+    })
     if (searchVal !== ""){
-    
-      this.handleGetSearchSuggest({ keywords: searchVal})
+      this.handleGetSearchSuggest()
+      
     }
   },
   /**
@@ -93,12 +98,8 @@ Page({
    * @param [String] keywords 关键字
    * @param [String] type "mobile" 返回移动端数据
    */
-  handleGetSearchSuggest({keywords,type="mobile"}={}){
-    const data = {
-      keywords,
-      type
-    }
-    search.getSearchSuggest(data).then(res=>{
+  handleGetSearchSuggest(){ 
+    search.getSearchSuggest({ keywords: this.data.searchKey, type: "mobile" }).then(res=>{
       if (res.data.result.allMatch.length > 0){
         this.setData({
           searchSuggestList: res.data.result.allMatch,
@@ -107,6 +108,18 @@ Page({
         })
        
       }
+    })
+  },
+  //取消搜索回到首页
+  handleCancelSearch(){
+    wx.switchTab({
+      url: '/pages/index/index',
+    })
+  },
+  //消除搜索值
+  handleRemoveInputVal(){
+    this.setData({
+      inputValue:""
     })
   }
 })

@@ -105,7 +105,27 @@ page{
   display: none;
 }
 
+/*搜索建议*/
 .search-suggest {
   margin-top: 100rpx;
   width: 100%;
+  padding: 20rpx 40rpx;
+}
+.search-result {
+  display: flex;
+  justify-items: start;
+  border-bottom: 1px solid #d6d6d6;
+  position: relative;
+  height: 80rpx;
+}
+.search-result-icon {
+  flex: 2;
+  position: absolute;
+  top: 22rpx;
+}
+.search-result-text {
+  flex: 22;
+  position: absolute;
+   top: 10rpx;
+  left: 80rpx;
 }

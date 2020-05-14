@@ -4,14 +4,14 @@
     <view class="weui-search-bar__form">
       <view class="weui-search-bar__box">
         <icon class="weui-icon-search" type="search" size="14" color='#EDA8A3'></icon>
-        <input focus='true' type="text" class="weui-search-bar__text" placeholder="请输入歌手或者歌曲名" placeholder-style="color:#EDA8A3" bindinput="getsearchKey" ></input>
+        <input focus='true' type="text" class="weui-search-bar__text" placeholder="请输入歌手或者歌曲名" placeholder-style="color:#EDA8A3" value="{{inputValue}}" bindinput="getsearchKey" ></input>
 
-         <view class="weui-icon-clear">
+         <view class="weui-icon-clear" bindtap="handleRemoveInputVal">
                     <icon type="clear" size="14" color='#EDA8A3'></icon>
           </view>
       </view>
     </view>
-     <view class="weui-search-bar__cancel-btn" bindtap="cancel">取消</view>
+     <view class="weui-search-bar__cancel-btn" bindtap="handleCancelSearch">取消</view>
   </view>
 </view>
 
@@ -36,8 +36,8 @@
 <!--搜索建议-->
 <view class="{{isSearchSuggest ? 'search-suggest' : 'header-hide' }}">
   <view wx:for="{{searchSuggestList}}" wx:key="index" class="search-result">
-    <icon class="weui-icon-search" type="search" size="14" color='#EDA8A3'></icon>
-     <text  class="search.result-text" >{{item.keyword}}</text>
+     <icon class="search-result-icon" type="search" size="14" color='#222'></icon>
+     <text  class="search-result-text" >{{item.keyword}}</text>
   </view>
 </view>
 </view>
