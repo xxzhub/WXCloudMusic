@@ -118,6 +118,10 @@ page{
   position: relative;
   height: 80rpx;
 }
+.search-value {
+  color: #1ac3e0;
+   border-bottom: 1px solid #d6d6d6;
+}
 .search-result-icon {
   flex: 2;
   position: absolute;
@@ -128,4 +132,22 @@ page{
   position: absolute;
    top: 10rpx;
   left: 80rpx;
+}
+
+/*搜索结果*/
+.search-result-list {
+  margin-top: 100rpx;
+  width: 100%;
+  padding: 20rpx 40rpx;
+}
+.search-result-item {
+  height: 100rpx;
+}
+.search-item-title {
+  color: #0cb4d1;
+  font-size: 14px;
+}
+.search-item-conent {
+  font-size: 20rpx;
+  color: rgb(112, 110, 110);
 }
