@@ -16,20 +16,27 @@
     <view class="play-music-lyric"></view>
   </view>
 
+  <!--播放进度条-->
+  <view class="weui-progress">
+    <view class="weui-progress__bar">
+      <view class="weui-progress__inner-bar js_progress" style="width: 80%;"></view>
+    </view>
+  </view>
+
   <!--操作-->
   <view class="play-music-tool">
     <view class="icon_playing ">
       <image src="/images/lastSong.png" mode="scaleToFill" class="icon_play" />
     </view>
     <view class="icon_playing">
-      <image bindtap="handlePausePlay"  hidden="{{!isPlay}}" src="/images/suspend.png" mode="scaleToFill"  class="icon_play" />
+      <image bindtap="handlePausePlay" hidden="{{!isPlay}}" src="/images/suspend.png" mode="scaleToFill" class="icon_play" />
       <!-- 暂停图标-->
-      <image bindtap="handlePausePlay" src="/images/play.png" hidden="{{isPlay}}" class="icon_play" /> 
+      <image bindtap="handlePausePlay" src="/images/play.png" hidden="{{isPlay}}" class="icon_play" />
       <!--播放图标-->
     </view>
-   
+
     <view class="icon_playing ">
-      <image src="/images/nextSong.png" mode="scaleToFill" class="icon_play"  />
+      <image src="/images/nextSong.png" mode="scaleToFill" class="icon_play" />
     </view>
   </view>
 </view>

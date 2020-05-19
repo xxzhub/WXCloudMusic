@@ -55,7 +55,6 @@ page, .play {
   width: 500rpx;
   height: 500rpx;
   position: absolute;
-  
 }
 
 .poster-singer {
@@ -68,8 +67,8 @@ page, .play {
 }
 
 .poster-singer-noplay {
-
 }
+
 .poster-singer-play {
   animation: rotate 15s linear infinite;
 }
@@ -82,21 +81,23 @@ page, .play {
   top: 0%;
   transform-origin: left top;
   transition: all 1s;
- 
-}
-.poster-needle-noplay {
-   transform: rotate(-20deg);
-}
-.poster-needle-play {
-   transform: rotate(0deg);
 }
 
+.poster-needle-noplay {
+  transform: rotate(-20deg);
+}
+
+.poster-needle-play {
+  transform: rotate(0deg);
+}
+
+/**播放进度*/
 
 /**操作按钮*/
 
 .play-music-tool {
   display: flex;
-  height: 15%;
+  height: 10%;
   text-align: center;
   line-height: 50px;
   box-sizing: border-box;
@@ -107,8 +108,8 @@ page, .play {
 }
 
 .icon_play {
-  width: 24%;
-  height: 33%;
+  width: 30%;
+  height: 38%;
 }
 
 @keyframes rotate {
@@ -121,11 +122,36 @@ page, .play {
   }
 }
 
-@keyframes needle{
+@keyframes needle {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(-20deg);
   }
+}
+
+.weui-progress {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.weui-progress__bar {
+  background-color: var(--weui-BG-0);
+  height: 3px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.weui-progress__inner-bar {
+  width: 0;
+  height: 100%;
+  background-color:rgb(56, 54, 54);
+
 }
