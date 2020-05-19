@@ -1,8 +1,8 @@
 {
   "pages":[
-    "pages/index/search/search",
     "pages/index/index",
     "pages/play/index",
+    "pages/index/search/search",
     "pages/my/index",
     "pages/collection/index"
   ],
@@ -39,5 +39,8 @@
       }
     ]
   },
+  "requiredBackgroundModes": [
+    "audio"
+  ],
   "sitemapLocation": "sitemap.json"
 }

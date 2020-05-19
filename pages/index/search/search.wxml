@@ -4,7 +4,7 @@
       <view class="weui-search-bar__form">
         <view class="weui-search-bar__box">
           <icon class="weui-icon-search" type="search" size="14" color='#EDA8A3'></icon>
-          <input focus='true' type="text" class="weui-search-bar__text" placeholder="请输入歌手或者歌曲名" placeholder-style="color:#EDA8A3" value="{{inputValue}}" bindinput="getsearchKey"></input>
+          <input focus='true' type="text" class="weui-search-bar__text" placeholder="请输入歌手或者歌曲名" placeholder-style="color:#EDA8A3"  value="{{inputValue}}" bindinput="getsearchKey"></input>
 
           <view class="weui-icon-clear" bindtap="handleRemoveInputVal">
             <icon type="clear" size="14" color='#EDA8A3'></icon>
@@ -46,7 +46,7 @@
 
   <!--搜索结果-->
   <view class="{{isSearchResult ? 'search-result-list' : 'header-hide'}}">
-    <view wx:for="{{searchResultList}}" wx:key="index" class="search-result-item">
+    <view wx:for="{{searchResultList}}" wx:key="index" data-id="{{item.id}}" bindtap="handlePlayMusic" class="search-result-item">
       <view class="search-item-title">{{item.name}}</view>
       <view class="search-item-conent">{{item.artists[0].name}} - {{item.album.name}}</view>
     </view>

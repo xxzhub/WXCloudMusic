@@ -156,5 +156,13 @@ Page({
       isSearchSuggest: false,
       isShowHotList: true,
     })
-  }
+  },
+
+  handlePlayMusic(e){
+    const musicId = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: `/pages/play/index?id=${musicId}`
+    })
+  },
+
 })

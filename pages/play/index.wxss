@@ -1,1 +1,131 @@
 /* pages/play/index.wxss */
+
+.background-image {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  filter: blur(20px);
+  transform: scale(1.5);
+}
+
+page, .play {
+  width: 100%;
+  height: 100%;
+}
+
+.play-music-name {
+  height: 100rpx;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.play-music-name >text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  width: 100%;
+}
+
+.play-music-main {
+  position: relative;
+  width: 100%;
+  height: 76%;
+}
+
+.play-music-poster {
+  width: 500rpx;
+  height: 500rpx;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 250rpx;
+  overflow: hidden;
+}
+
+.poster-back {
+  width: 500rpx;
+  height: 500rpx;
+  position: absolute;
+  
+}
+
+.poster-singer {
+  position: absolute;
+  width: 370rpx;
+  height: 370rpx;
+  border-radius: 50%;
+  top: 14%;
+  left: 13%;
+}
+
+.poster-singer-noplay {
+
+}
+.poster-singer-play {
+  animation: rotate 15s linear infinite;
+}
+
+.poster-needle {
+  width: 150rpx;
+  height: 500rpx;
+  position: absolute;
+  right: 20%;
+  top: 0%;
+  transform-origin: left top;
+  transition: all 1s;
+ 
+}
+.poster-needle-noplay {
+   transform: rotate(-20deg);
+}
+.poster-needle-play {
+   transform: rotate(0deg);
+}
+
+
+/**操作按钮*/
+
+.play-music-tool {
+  display: flex;
+  height: 15%;
+  text-align: center;
+  line-height: 50px;
+  box-sizing: border-box;
+}
+
+.icon_playing {
+  flex: 1;
+}
+
+.icon_play {
+  width: 24%;
+  height: 33%;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes needle{
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-20deg);
+  }
+}
