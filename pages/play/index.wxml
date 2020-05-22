@@ -6,27 +6,38 @@
     <text>{{song.name}}</text>
   </view>
   <!--歌手海报-->
-  <view class="play-music-main">
+  <view bindtap="handleSwitchLyric" hidden="{{isShowLyric}}" class="play-music-main">
     <view class="play-music-poster">
       <image class="poster-back" src="/images/disk.png" mode="scaleToFill"></image>
       <image src="{{song.al.picUrl}}" class="poster-singer {{isPlay ? 'poster-singer-play' : 'poster-singer-noplay'}}"></image>
     </view>
     <image class="poster-needle {{isPlay ? 'poster-needle-play' : 'poster-needle-noplay'}}" src="/images/stick.png" mode="scaleToFill"></image>
-    <!--歌词-->
-    <view class="play-music-lyric"></view>
   </view>
 
-  <!--播放进度条-->
-  <view class="weui-progress">
-    <view class="weui-progress__bar">
-      <view class="weui-progress__inner-bar js_progress" style="width: 80%;"></view>
+   <!--歌词-->
+    <scroll-view scroll-y="true" bindtap="handleSwitchLyric" hidden="{{!isShowLyric}}" class="play-music-lyric">
+    <view class="lyric-content">
+    <text>{{lyricData}}</text>
     </view>
+    </scroll-view>
+
+  <!--播放进度条-->
+  <view class="music-progress">
+    <text class="music-startTime" >{{startTime}}</text>
+    <view class="weui-progress">
+      <view class="weui-progress__bar">
+        <view class="weui-progress__inner-bar js_progress" style="width: 100%;"></view>
+      </view>
+    </view>
+     <text  class="music-endTime">{{endTime}}</text>
   </view>
+
+
 
   <!--操作-->
   <view class="play-music-tool">
     <view class="icon_playing ">
-      <image src="/images/lastSong.png" mode="scaleToFill" class="icon_play" />
+      <image src="/images/lastSong.png" bindtap="handlePlayNextMusic" mode="scaleToFill" class="icon_play" />
     </view>
     <view class="icon_playing">
       <image bindtap="handlePausePlay" hidden="{{!isPlay}}" src="/images/suspend.png" mode="scaleToFill" class="icon_play" />
@@ -36,7 +47,7 @@
     </view>
 
     <view class="icon_playing ">
-      <image src="/images/nextSong.png" mode="scaleToFill" class="icon_play" />
+      <image src="/images/nextSong.png" bindtap="handlePlayNextMusic" mode="scaleToFill" class="icon_play" />
     </view>
   </view>
 </view>

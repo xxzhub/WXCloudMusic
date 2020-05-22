@@ -20,5 +20,15 @@ module.exports = {
         ids
       }
     })
+  },
+  //获取歌词
+  getMusicLyric(id){
+    return ajax.request({
+      url:"/lyric",
+      method:'get',
+      data:{
+        id
+      }
+    })
   }
 }

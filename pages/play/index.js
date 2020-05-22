@@ -1,6 +1,7 @@
 // pages/play/index.js
 const play = require("../../api/play/index.js")
 const app = getApp()
+import { randomNum} from '../../utils/auth.js'
 Page({
 
   /**
@@ -11,6 +12,10 @@ Page({
     isPlay: true,//是否播放
     musicUrl: "",//歌曲Url
     musicId:"",//歌曲id
+    endTime:'4:36',//歌曲总时间
+    startTime:"0:00",//歌曲开始时间
+    isShowLyric:false,//是否显示歌词
+    lyricData:"",//歌词
   },
 
   /**
@@ -88,7 +93,9 @@ Page({
       const musicUrl = res.data.data[0].url
       //获取歌曲信息
       const ids = id
-      this.handleGetMusicInfo(ids)
+      this.handleGetMusicInfo(ids) 
+      //获取歌词
+      this.handleGetMusicLyric(id)
       if (musicUrl === null) {
         wx.showModal({
           content: '服务器开了点小差~~',
@@ -134,6 +141,40 @@ Page({
     let backgroundAudioManager = wx.getBackgroundAudioManager()
     backgroundAudioManager.src = url
     backgroundAudioManager.title = "title"
+    backgroundAudioManager.onEnded(()=>{
+      this.handlePlayNextMusic()
+    })
     app.globalData.bgAudioManage = backgroundAudioManager
+  },
+  /**
+   * 播放下一首
+   */
+  handlePlayNextMusic(){
+    let searchMusicList = wx.getStorageSync('searchMusicList')
+    let random = randomNum(0,searchMusicList.length) - 1
+    //随机播放搜索列表中一首
+    this.handleGetMusicUrl(searchMusicList[random].id) //获取歌曲url
+  },
+  /**
+   * 切换歌词
+   */
+  handleSwitchLyric(){
+    this.setData({
+      isShowLyric: !this.data.isShowLyric
+    })
+  },
+  /**
+   * 获取歌词
+   */
+  handleGetMusicLyric(id){
+    play.getMusicLyric(id).then(res => {
+     /*  let partten = /[00:00.000]/-g
+      let partten = /[\d{0~9}:00.000]/ - g
+      let lyric =  */
+      this.setData({
+        lyricData:res.data.lrc.lyric
+      })
+     
+    })
   }
 })

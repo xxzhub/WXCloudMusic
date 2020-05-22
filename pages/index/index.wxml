@@ -10,4 +10,7 @@
 		</view>
   </view>
 	</view>
+
+  <!--轮播图-->
+   <carousel></carousel>
 </view>

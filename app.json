@@ -1,18 +1,18 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/play/index",
     "pages/index/search/search",
     "pages/my/index",
     "pages/collection/index"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#c0392b",
     "navigationBarTitleText": "网易云音乐",
-    "navigationBarTextStyle":"white"
+    "navigationBarTextStyle": "white"
   },
-  "tabBar":{
+  "tabBar": {
     "custom": true,
     "color": "#8D8D8D",
     "selectedColor": "#DC4238",

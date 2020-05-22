@@ -1,0 +1,4 @@
+.carousel {
+  height: 320rpx;
+  padding: 30rpx;
+}

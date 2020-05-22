@@ -132,6 +132,7 @@ Page({
     * @param [Number] type 返回类型 1单曲 
     */
   handleGetSearch() {
+    wx.removeStorageSync('searchMusicList')
     search.getSearch({ keywords: this.data.searchKey, type: 1, limit: 50, offset: 2 }).then(res => {
       wx.hideLoading()
        const data = res.data.result.songs
@@ -139,6 +140,14 @@ Page({
          this.setData({
            searchResultList:data
          })
+         const newData = data.map(item =>{
+           let newItem={id:'',name:''}
+           newItem.id = item.id
+           newItem.name = item.name
+           return newItem
+         })
+       
+         wx.setStorageSync('searchMusicList', newData)
        }
     })
   },
