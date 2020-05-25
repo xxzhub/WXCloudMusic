@@ -75,7 +75,7 @@ page, .play {
 
 .poster-needle {
   width: 150rpx;
-  height: 330rpx;
+  height: 28vh;
   position: absolute;
   right: 30%;
   top: 0%;

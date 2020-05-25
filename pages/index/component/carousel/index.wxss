@@ -1,4 +1,30 @@
 .carousel {
-  height: 320rpx;
+  height: 310rpx;
   padding: 30rpx;
+}
+
+.banner-item {
+  width: 100%;
+  height: 100%;
+}
+
+.banner-list {
+  height: 100%;
+}
+
+.block {
+  box-shadow: 3px 2px 8px 1px #666;
+  overflow: hidden;
+  border-radius: 12rpx;
+}
+
+.banner-text{
+  height: 40rpx;
+  color: #fff;
+  position: absolute;
+  line-height: 40rpx;
+  font-size:12px;
+  border-radius: 2px;
+  bottom: 0%;
+  right: 0%;
 }

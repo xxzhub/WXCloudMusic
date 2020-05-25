@@ -1,8 +1,13 @@
 <view class="carousel" >
-<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-  <block wx:for="{{background}}" wx:key="*this">
-    <swiper-item>
-      <view class="swiper-item {{item}}"></view>
+<swiper class="block" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" indicator-color="#888" indicator-active-color="#DC4238" duration="{{duration}}">
+  <block  wx:for="{{bannerList}}" wx:key="index">
+    <swiper-item bindtap="handleGoPlay" data-song="{{item.song}}" > 
+      <view  class="swiper-item banner-list">
+      <image class="banner-item" src="{{item.pic}}" mode="scaleToFill"></image>
+      <view class="banner-text" style="background-color:{{item.titleColor}}" >
+      {{item.typeTitle}}
+      </view>
+      </view>
     </swiper-item>
   </block>
 </swiper>
