@@ -1,10 +1,10 @@
 <view class="navigation">
   <view class="navigation-list">
-    <view class="navigation-item" wx:for="{{iconList}}" :key="index">
+    <view class="navigation-item" wx:for="{{iconList}}" wx:key="index">
       <view class="navigation-icon">
-        <image ></image>
+        <image class="navigation-image" mode="scaleToFill" src="/images/{{item.icon}}" ></image>
       </view>
-      <view>名字</view>
+      <view class="navigation-item-name">{{item.name}}</view>
     </view>
   </view>
 </view>

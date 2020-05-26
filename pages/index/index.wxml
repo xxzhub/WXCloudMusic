@@ -1,4 +1,4 @@
-<view class="page">
+<scroll-view class="page">
 <!--输入框-->
 	<view class="page-header">
   <view class="weui-search-bar">
@@ -13,4 +13,5 @@
 
   <!--轮播图-->
    <carousel></carousel>
-</view>
+   <quick-navigation></quick-navigation>
+</scroll-view>

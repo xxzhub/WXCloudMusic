@@ -1,3 +1,3 @@
 {
-  "usingComponents": {"carousel":"../component/carousel"}
+  "usingComponents": {"carousel":"../component/carousel","quick-navigation":"../component/quick-navigation"}
 }
