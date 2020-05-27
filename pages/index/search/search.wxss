@@ -153,6 +153,7 @@ page{
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  width: 90%;
 }
 .search-item-conent {
   font-size: 20rpx;
@@ -160,4 +161,5 @@ page{
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  width: 90%;
 }

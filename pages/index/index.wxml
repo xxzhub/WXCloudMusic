@@ -13,5 +13,8 @@
 
   <!--轮播图-->
    <carousel></carousel>
+   <!--四个导航入口-->
    <quick-navigation></quick-navigation>
+   <!--推荐歌单-->
+   <song-list></song-list>
 </scroll-view>

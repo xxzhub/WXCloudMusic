@@ -1,3 +1,7 @@
 {
-  "usingComponents": {"carousel":"../component/carousel","quick-navigation":"../component/quick-navigation"}
+  "usingComponents": {
+    "carousel": "../component/carousel",
+    "quick-navigation": "../component/quick-navigation",
+    "song-list":"../component/song-list"
+  }
 }
