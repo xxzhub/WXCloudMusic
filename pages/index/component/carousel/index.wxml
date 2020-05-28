@@ -1,5 +1,5 @@
 <view class="carousel" >
-<swiper class="block" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" indicator-color="#888" indicator-active-color="#DC4238" duration="{{duration}}">
+<swiper class="block" circular="true" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" indicator-color="#888" indicator-active-color="#DC4238" duration="{{duration}}">
   <block  wx:for="{{bannerList}}" wx:key="index">
     <swiper-item bindtap="handleGoPlay" data-song="{{item.song}}" > 
       <view  class="swiper-item banner-list">

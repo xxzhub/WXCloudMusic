@@ -1,16 +1,19 @@
 <!--pages/index/component/song-list/index.wxml-->
 <view class="song-list">
   <view class="song-list-header">
-    <view class="header-title">你的歌单精选帖</view>
+    <view class="header-title">发现好歌单</view>
     <view class="header-more">
-    <text>查看更多</text>
+      <text>查看更多</text>
     </view>
   </view>
   <view class="song-list-content">
-    <view class="song-list-item">
-      <image class="item-image"></image>
-      <view class="item-playcount"></view>
-      <view class="item-describe ">陷入没好的的1的的1的</view>
+    <view class="song-list-item" wx:for="{{songlist}}" wx:key="index">
+      <image src="{{item.picUrl}}" mode="scaleToFill" class="item-image"></image>
+      <view class="item-playcount">
+        <image class="item-play-count" src="/images/playCount.png"></image>
+        <view class="item-play-count-text">{{item.playCount}}</view>
+      </view>
+      <view class="item-describe ">{{item.name}}</view>
     </view>
   </view>
 </view>

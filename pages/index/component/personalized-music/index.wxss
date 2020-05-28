@@ -1,0 +1,87 @@
+/* pages/index/component/personalized-music/index.wxss */
+.music-list {
+  height: 1000rpx;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30rpx 30rpx;
+}
+
+.music-list-header {
+  height: 60rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.header-title {
+  width: 60%;
+  color: #000;
+  font-weight: 700;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.header-more {
+  border: 1px solid #888;
+  border-radius: 30rpx;
+  font-size: 12px;
+  box-sizing: border-box;
+  padding: 6rpx 20rpx;
+  display: flex;
+  justify-content: flex-end;
+}
+.item-play-count {
+  height: 100%;
+  width: 30rpx;
+}
+
+.music-list-content {
+  height: 800rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.music-list-item {
+  height: 100rpx;
+  position: relative;
+  width: 100%;
+}
+.music-image {
+  width: 100rpx;
+  height: 100%;
+  background-color: #c41c1c;
+  border-radius: 10rpx;
+}
+.item-content {
+  height: 100%;
+  width: 70%;
+  position: absolute;
+  left: 120rpx;
+  top: 0%;
+}
+.item-content-title {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+}
+.item-content-name {
+  position: absolute;
+  top: 4%;
+  left: 80%;
+  color: #666;
+  font-size: 12px;
+}
+.item-content-explain {
+    position: absolute;
+  bottom: 4%;
+  left: 0%;
+  color: #666;
+  font-size: 12px;
+}
+.music-play-icon {
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  top: 20%;
+  right: 0%;
+}

@@ -1,7 +1,7 @@
 /* pages/index/component/song-list/index.wxss */
 
 .song-list {
-  height: 300rpx;
+  height: 620rpx;
   width: 100%;
   box-sizing: border-box;
   padding: 30rpx 30rpx;
@@ -29,9 +29,49 @@
   padding: 6rpx 20rpx;
 }
 .song-list-content {
-  height: 220rpx;
+  height: 250rpx;
   width: 100%;
+  display: flex;
+   justify-content: space-between;
+   flex-wrap:wrap;
+   margin-top: 20rpx;
 }
 .song-list-item {
   width: 32%;
+  height: 100%;
+   position: relative;
+   overflow: hidden;
+}
+.item-image {
+  width: 100%;
+  height: 70%;
+  border-radius: 10rpx;
+}
+.item-describe {
+  height: 24%;
+  width: 100%;
+  font-size: 24rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #555;
+}
+.item-playcount {
+  position: absolute;
+  right: 1%;
+  top: 2%;
+  height: 30rpx;
+  width: 100%;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+}
+.item-play-count {
+  height: 100%;
+  width: 30rpx;
+}
+.item-play-count-text {
+  font-size: 12px;
+  line-height: 30rpx;
+  color: #fff;
 }

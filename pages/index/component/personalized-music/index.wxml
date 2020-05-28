@@ -1,0 +1,22 @@
+<!--pages/index/component/personalized-music/index.wxml-->
+<view class="music-list">
+  <view class="music-list-header">
+    <view class="header-title">你的精选歌曲</view>
+    <view class="header-more">
+      <image class="item-play-count" src="/images/musicPlay.png"></image>
+      <text bindtap="handlePlayallMusic">播放全部</text>
+    </view>
+  </view>
+
+  <view class="music-list-content">
+    <view class="music-list-item" wx:for="{{musicList}}" wx:key="index" bindtap="handleGoPlay" data-songId="{{item.song.id}}" >
+      <image class="music-image" mode="scaleToFill" src="{{item.picUrl}}"></image>
+      <view class="item-content">
+        <view class="item-content-title">{{item.name}}</view>
+        <view class="item-content-name">-{{item.song.artists[0].name}}</view>
+        <view class="item-content-explain">{{item.song.artists[0].name}} - {{item.song.album.name}}</view>
+      </view>
+      <image src="/images/musicPlayList.png" mode="scaleToFill" class="music-play-icon"></image>
+    </view>
+  </view>
+</view>

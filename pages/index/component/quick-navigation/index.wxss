@@ -16,7 +16,7 @@
 .navigation-icon {
   height: 76%;
   width: 100%;
-  background-color: #c40d0d;
+  background-color: #f00f0f;
   border-radius: 50%;
   position: relative;
 }

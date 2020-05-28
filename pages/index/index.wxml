@@ -17,4 +17,7 @@
    <quick-navigation></quick-navigation>
    <!--推荐歌单-->
    <song-list></song-list>
+   <!--推荐音乐-->
+   <personalized-music></personalized-music>
+   
 </scroll-view>
