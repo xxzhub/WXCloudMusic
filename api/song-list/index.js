@@ -19,5 +19,15 @@ function getPersonalizedNewsong(){
     method:'get'
   })
 }
+/**
+ * 获取歌单详情
+ */
+function getplaylistdetail(data){
+  return ajax.request({
+    url:"/playlist/detail",
+    method:'get',
+    data
+  })
+}
 
-export { gethighquality, getPersonalizedNewsong}
+export { gethighquality, getPersonalizedNewsong, getplaylistdetail}

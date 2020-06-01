@@ -54,6 +54,11 @@ Component({
           songlist: res.data.result
         })
       })
+    },
+    handleGodetail(e){
+      wx.navigateTo({
+        url: `/pages/songdetail/index?id=${e.currentTarget.dataset.id}`,
+      })
     }
   }
 })

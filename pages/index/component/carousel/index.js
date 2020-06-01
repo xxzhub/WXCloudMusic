@@ -20,7 +20,13 @@ Component({
   lifetimes: {
     //组件创建过程中
     created() {
-
+      wx.authorize({
+        scope: 'scope.userInfo',
+        success() {
+          // 用户已经同意小程序使用录音功能，后续调用 wx.startRecord 接口不会弹窗询问
+         
+        }
+      })
     },
     //组件实列进入页面节点执行
     attached() {

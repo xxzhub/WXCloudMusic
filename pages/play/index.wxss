@@ -24,14 +24,36 @@ page, .play {
   position: relative;
 }
 
-.play-music-name >text {
+.play-music-name >text:nth-child(1) {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  bottom: 0%;
+  left: 13%;
   color: #fff;
-  width: 100%;
+  width: 80%;
+  text-align: left;
+   text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.play-music-name >text:nth-child(2) {
+  position: absolute;
+  bottom: -42%;
+  left: 13%;
+  color: #fff;
+  width: 80%;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+
+.navtabbar-back {
+  width: 40rpx;
+  height: 49rpx;
+  position: absolute;
+  left: 5%;
+  bottom: 0%;
 }
 
 .play-music-main {

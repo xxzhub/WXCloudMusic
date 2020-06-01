@@ -4,6 +4,8 @@
   <!--歌词名字-->
   <view class="play-music-name">
     <text>{{song.name}}</text>
+    <text>{{song.ar[0].name}}</text>
+    <image  mode="scaleToFill" class="navtabbar-back" src="/images/back.png" bindtap="back" ></image>
   </view>
   <!--歌手海报-->
   <view bindtap="handleSwitchLyric" hidden="{{isShowLyric}}" class="play-music-main">

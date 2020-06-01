@@ -7,8 +7,8 @@
     </view>
   </view>
   <view class="song-list-content">
-    <view class="song-list-item" wx:for="{{songlist}}" wx:key="index">
-      <image src="{{item.picUrl}}" mode="scaleToFill" class="item-image"></image>
+    <view class="song-list-item"  wx:for="{{songlist}}" wx:key="index">
+      <image src="{{item.picUrl}}"  bindtap="handleGodetail" data-id="{{item.id}}"  mode="scaleToFill" class="item-image"></image>
       <view class="item-playcount">
         <image class="item-play-count" src="/images/playCount.png"></image>
         <view class="item-play-count-text">{{item.playCount}}</view>

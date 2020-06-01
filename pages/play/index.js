@@ -82,6 +82,7 @@ Page({
    */
   handleGetMusicInfo(ids) {
     play.getSongDetail(ids).then(res => {
+      console.log(res)
       this.setData({
         song: res.data.songs[0]
       })
@@ -175,6 +176,14 @@ Page({
         lyricData:res.data.lrc.lyric
       })
      
+    })
+  },
+  /**
+  * 返回上一级
+  */
+  back() {
+    wx.navigateBack({
+
     })
   }
 })

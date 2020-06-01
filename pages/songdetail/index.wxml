@@ -1,0 +1,43 @@
+<image class="bgk-img" mode="scaleToFill" src="{{detailData.coverImgUrl}}"></image>
+<view class="navtabbar"> <text>歌单</text> 
+<image  mode="scaleToFill" class="navtabbar-back" src="/images/back.png" bindtap="back" ></image>
+ </view>
+<view class="detail">
+
+  <view class="header">
+    <view class="header-left">
+      <image class="header-image" mode="scaleToFill" src="{{detailData.coverImgUrl}}"></image>
+      <view class="header-left-playcount">
+        <image class="header-left-play-count" src="/images/playCount.png"></image>
+        <view class="header-left-play-count-text">{{detailData.playCount}}</view>
+      </view>
+    </view>
+    <view class="header-right">
+      <view class="right-title">{{detailData.name}}</view>
+      <view class="right-content">{{detailData.description}}</view>
+    </view>
+  </view>
+
+  <view class="music">
+    <view class="music-header">
+      <image class="music-icon" src="/images/musicPlayList.png" mode="scaleToFile"></image>
+      <text class="music-play-all">播放全部
+      </text>
+      <text class="music-all-count">(共{{detailData.trackIds.length}}首)</text>
+    </view>
+
+    <view class="music-item" bindtap="handleGoPlay" data-id="{{item.id}}" wx:for="{{detailData.tracks}}" wx:key="index">
+      <view class="music-item-count">
+        <view class="index">{{index + 1}}</view>
+      </view>
+      <view class="music-item-content">
+        <view class="item-title">{{item.name}}</view>
+        <view class="item-content">{{item.ar[0].name}}-{{item.al.name}}</view>
+      </view>
+      <view class="play">
+        <image class="play-icon" mode="scaleToFill" src="/images/musicPlayList.png"></image>
+      </view>
+    </view>
+    
+  </view>
+</view>

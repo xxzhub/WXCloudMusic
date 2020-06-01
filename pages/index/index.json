@@ -4,5 +4,8 @@
     "quick-navigation": "../component/quick-navigation",
     "song-list":"../component/song-list",
     "personalized-music":"../component/personalized-music"
-  }
+  },
+  "enablePullDownRefresh":true,
+  "backgroundTextStyle":"dark",
+  "backgroundColor": "#C62F2F"
 }
