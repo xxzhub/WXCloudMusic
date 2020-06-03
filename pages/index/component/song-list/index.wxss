@@ -1,7 +1,7 @@
 /* pages/index/component/song-list/index.wxss */
 
 .song-list {
-  height: 620rpx;
+  height: 770rpx;
   width: 100%;
   box-sizing: border-box;
   padding: 30rpx 30rpx;
@@ -29,7 +29,7 @@
   padding: 6rpx 20rpx;
 }
 .song-list-content {
-  height: 250rpx;
+  height: 330rpx;
   width: 100%;
   display: flex;
    justify-content: space-between;

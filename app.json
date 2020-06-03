@@ -1,10 +1,11 @@
 {
   "pages": [
+    "pages/my/index",
     "pages/index/index",
     "pages/songdetail/index",
     "pages/play/index",
     "pages/index/search/search",
-    "pages/my/index",
+    
     "pages/collection/index"
   ],
   "window": {

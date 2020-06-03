@@ -1,19 +1,12 @@
 <!--pages/my/index.wxml-->
 <view class="login">
-  <form bindsubmit="handleLogin">
-    <view class="login-location">
-      <view class="phone">
-        <text class="phone-text">手机号:</text>
-        <input class="phone-input" bindinput="handleSetPhone" placeholder="请输入手机号" value="{{phone}}"></input>
-      </view>
-      <view class="password">
-        <text class="password-text">密码:</text>
-        <input class="password-input" bindinput="handleSetPwd" placeholder="请输入密码" value="{{password}}" password="{{isPassword}}"></input>
-      </view>
-      <view>
-        <button formType="submit" loading="{{loginLoading}}" type="{{buttonType}}">登录</button>
-      </view>
+  <view class="login-button" wx:if="{{!isLogin}}">
+    <button type="primary" open-type="getUserInfo" bindgetuserinfo="handleGetAuthorize">微信登录</button>
+  </view>
+  <view class="home" wx:if="{{isLogin}}">
+    <view class="home-userInfo">
+      <image class="user-photo" mode="scaleToFill" src="{{userInfo.avatarUrl}}"></image>
+      <view class="user-name">{{userInfo.nickName}}</view>
     </view>
-  </form>
-
+  </view>
 </view>
